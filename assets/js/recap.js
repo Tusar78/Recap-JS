@@ -61,8 +61,19 @@ const products = [
   { id: 7, name: "lenovo", price: 300, color: "pink" },
 ];
 
-const needLenovo = products.filter(product => product.name == 'lenovo');
+const needLenovo = products.filter((product) => product.name == "lenovo");
 console.log(needLenovo);
 
-const otherwisePink = products.filter(product => product.color != 'pink');
+const otherwisePink = products.filter((product) => product.color != "pink");
 console.log(otherwisePink);
+
+// Now lets talk about API
+
+const BASE_URL = `https://jsonplaceholder.typicode.com`;
+
+
+fetch(`${BASE_URL}/users`)
+  .then((res) => res.json())
+  .then((data) => console.log(data));
+
+
