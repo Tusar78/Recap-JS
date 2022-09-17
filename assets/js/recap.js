@@ -22,3 +22,31 @@ const animal = {
 const {name, color, age} = animal;
 
 console.log(name, color, age);
+
+// Rest parameter
+const car = {
+  carName: 'Fiat',
+  color: 'red',
+  price: '$20k'
+}
+
+const {carName, ...rest} = car;
+console.log(carName);
+
+
+// When object going to undefined
+const person = {
+  personName : 'Tusar',
+  eyeColor: 'Black',
+  age: 23
+}
+
+const {personName, ...personRest} = person || {};
+console.log(personName);
+
+// JavaScript Map
+const arrayNum3 = [1, 2, 3, 4, 5];
+console.log(...arrayNum3);
+arrayNum3.map(num => {
+  console.log(num * num);
+})
